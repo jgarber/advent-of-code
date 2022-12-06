@@ -1,0 +1,1 @@
+FoodItem = Struct.new(:calories)
