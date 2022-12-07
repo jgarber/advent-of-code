@@ -1,11 +1,6 @@
+require_relative 'rules'
 class Round
-  RANK = {
-    rock: :scissors,
-    paper: :rock,
-    scissors: :paper
-  }
-  CHOICES = RANK.keys
-  OUTCOMES = [:lose, :draw, :win]
+  include Rules
 
   attr_reader :their_choice, :our_choice
 

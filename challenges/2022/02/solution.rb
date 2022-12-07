@@ -10,7 +10,8 @@ module Year2022
     end
 
     def part_2
-      nil
+      rounds = ElfStrategy.from_data(data)
+      Tournament.new(rounds).total_score
     end
   end
 end
