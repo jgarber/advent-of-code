@@ -5,12 +5,15 @@ module Year2022
     # @input is available if you need the raw data input
     # Call `data` to access either an array of the parsed data, or a single record for a 1-line input file
 
-    def part_1
+    def part_1 # Quick 'n' dirty
       data.map { |t| Rucksack.from_text(t) }.sum { |r| r.duplicate_item.value }
     end
 
-    def part_2
-      nil
+    def part_2 # FIXME: not very OO, not TDDed
+      groups = data.in_groups_of(3)
+      groups.map do |group|
+        group.map(&:chars).inject(&:intersection).first
+      end.sum { |badge| Item.new(badge).value }
     end
 
     private
