@@ -12,7 +12,9 @@ module Year2022
     end
 
     def part_2
-      nil
+      data.map do |text|
+        AssignmentPair.from_text(text)
+      end.count { |pair| pair.overlapping? }
     end
 
     private
