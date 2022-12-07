@@ -2,8 +2,10 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem "aoc_rb"
 
 gem "activesupport", "~> 7.0"
+
+gem "standard", group: [:development, :test]

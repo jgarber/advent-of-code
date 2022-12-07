@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Year2022
   class Day01 < Solution
     # @input is available if you need the raw data input
@@ -9,12 +10,13 @@ module Year2022
     end
 
     def part_2
-      elves.calories.sort.reverse.first(3).sum
+      elves.calories.sort.last(3).sum
     end
 
     private
-      def elves 
-        Elves.from_text(data)
-      end
+
+    def elves
+      Elves.from_text(data)
+    end
   end
 end

@@ -1,24 +1,25 @@
 # frozen_string_literal: true
-require 'spec_helper'
+
+require "spec_helper"
 
 RSpec.describe Year2022::Day01 do
   let(:input) { File.read(File.join(File.dirname(__FILE__), "../../../challenges/2022/01/input.txt")) }
   let(:example_input) {
     <<~EOF
-    1000
-    2000
-    3000
-    
-    4000
-    
-    5000
-    6000
-    
-    7000
-    8000
-    9000
-    
-    10000
+      1000
+      2000
+      3000
+      
+      4000
+      
+      5000
+      6000
+      
+      7000
+      8000
+      9000
+      
+      10000
     EOF
   }
 

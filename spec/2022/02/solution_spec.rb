@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'spec_helper'
+
+require "spec_helper"
 
 RSpec.describe Year2022::Day02 do
   let(:input) { File.read(File.join(File.dirname(__FILE__), "../../../challenges/2022/02/input.txt")) }

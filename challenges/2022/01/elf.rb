@@ -1,6 +1,6 @@
 class Elf
   attr_reader :food_items
-  
+
   def initialize(food_items)
     @food_items = food_items
   end

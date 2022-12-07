@@ -10,7 +10,7 @@ class NaiveStrategy
 
   def self.from_data(data)
     data.map do |datum|
-      Round.new(*self.decode(datum))
+      Round.new(*decode(datum))
     end
   end
 

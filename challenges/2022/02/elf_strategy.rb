@@ -1,5 +1,5 @@
-require_relative 'naive_strategy'
-require_relative 'rules'
+require_relative "naive_strategy"
+require_relative "rules"
 
 class ElfStrategy < NaiveStrategy
   include Rules
@@ -14,9 +14,9 @@ class ElfStrategy < NaiveStrategy
     their_code, outcome_code = data.split(" ")
     their_choice = KEY[their_code.to_sym]
     strategy = STRATEGY_KEY[outcome_code.to_sym]
-    our_choice = self.choose_response(strategy, their_choice)
+    our_choice = choose_response(strategy, their_choice)
 
-    return their_choice, our_choice
+    [their_choice, our_choice]
   end
 
   def self.choose_response(strategy, their_choice)

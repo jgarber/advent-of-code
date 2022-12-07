@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 RSpec.describe Elf do
   context "when ititialized with an array of FoodItems" do

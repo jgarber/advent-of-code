@@ -4,6 +4,6 @@ class Tournament
   end
 
   def total_score
-    @rounds.sum {|round| round.score }
+    @rounds.sum { |round| round.score }
   end
 end

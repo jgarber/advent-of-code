@@ -1,11 +1,11 @@
-require_relative 'rules'
+require_relative "rules"
 class Round
   include Rules
 
   attr_reader :their_choice, :our_choice
 
   def initialize(*args)
-    raise ArgumentError unless args.all? {|a| CHOICES.include?(a) }
+    raise ArgumentError unless args.all? { |a| CHOICES.include?(a) }
     @their_choice, @our_choice = args.first(2)
   end
 

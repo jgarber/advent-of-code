@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Year2022
   class Day02 < Solution
     # @input is available if you need the raw data input
