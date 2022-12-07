@@ -8,4 +8,7 @@ gem "aoc_rb"
 
 gem "activesupport", "~> 7.0"
 
-gem "standard", group: [:development, :test]
+group :development, :test do
+  gem "standard"
+  gem 'guard-rspec', require: false
+end
