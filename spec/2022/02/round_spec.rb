@@ -64,12 +64,4 @@ RSpec.describe Round do
       expect(Round.new(:scissors, :rock)).to_not eq(Round.new(:rock, :scissors))
     end
   end
-
-  describe ".from_text" do
-    it "converts letter representations to choices" do
-      expect(Round.from_text("A X")).to eq(Round.new(:rock, :rock))
-      expect(Round.from_text("B Y")).to eq(Round.new(:paper, :paper))
-      expect(Round.from_text("C Z")).to eq(Round.new(:scissors, :scissors))
-    end
-  end
 end

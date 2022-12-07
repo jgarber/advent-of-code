@@ -6,7 +6,6 @@ class Round
   }
   CHOICES = RANK.keys
   OUTCOMES = [:lose, :draw, :win]
-  CHOICE_CODES = %w[A B C X Y Z]
 
   attr_reader :their_choice, :our_choice
 
@@ -41,14 +40,5 @@ class Round
     return super unless other.is_a?(Round)
 
     their_choice == other.their_choice && our_choice == other.our_choice
-  end
-
-  def self.from_text(data)
-    choice_codes = data.split(" ")
-    round_choices = choice_codes.map do |code|
-      index = CHOICE_CODES.index(code) % 3
-      CHOICES[index]
-    end
-    new(*round_choices)
   end
 end

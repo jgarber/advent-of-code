@@ -5,7 +5,8 @@ module Year2022
     # Call `data` to access either an array of the parsed data, or a single record for a 1-line input file
 
     def part_1
-      Tournament.from_data(data).total_score
+      rounds = NaiveStrategy.from_data(data)
+      Tournament.new(rounds).total_score
     end
 
     def part_2

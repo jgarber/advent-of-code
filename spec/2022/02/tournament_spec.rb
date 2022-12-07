@@ -1,14 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe Tournament do
-  describe "#from_data" do
-    it "passes the data to each round" do
-      expect(Round).to receive(:from_text).with("A X")
-      expect(Round).to receive(:from_text).with("B Y")
-      Tournament.from_data(["A X", "B Y"])
-    end
-  end
-
   describe "#total_score" do
     let(:tournament) {}
     let(:round1) { instance_double("Round") }
